@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CssGrid</title>
+
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 200px;
+      grid-gap: 10px;
+    }
+
+    .wrapper > div:nth-child(1) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .wrapper div {
+      background: #2500f9;
+      padding: 1rem;
+    }
+
+    .wrapper div:nth-child(even) {
+      background: #0064f9;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+  </div>
+</body>
+</html>
