@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CssGrid</title>
+
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: 200px;
+      grid-gap: .5rem;
+
+      grid-template-areas: 
+        "header header header header"
+        "main main main aside"
+        "footer footer footer footer"
+      ;
+    }
+
+    header {
+      grid-area: header;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    aside {
+      grid-area: aside;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+
+    .wrapper * {
+      background: #2500f9;
+      padding: 1rem;
+    }
+
+    .wrapper *:nth-child(even) {
+      background: #0064f9;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>header</header>
+    <main>main</main>
+    <aside>aside</aside>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
